@@ -75,7 +75,6 @@ runs:
         key: unity-editor
 
     - name: Cache Unity Windows installer
-      if: steps.check-target-platforms.outputs.windows == 'true'
       id: cache-unity-windows
       uses: actions/cache@v2
       with:
@@ -83,7 +82,6 @@ runs:
         key: unity-windows
 
     - name: Cache Unity iOS installer
-      if: steps.check-target-platforms.outputs.ios == 'true'
       id: cache-unity-ios
       uses: actions/cache@v2
       with:
@@ -91,7 +89,6 @@ runs:
         key: unity-ios
 
     - name: Cache Unity Android installer
-      if: steps.check-target-platforms.outputs.android == 'true'
       id: cache-unity-android
       uses: actions/cache@v2
       with:
@@ -99,7 +96,6 @@ runs:
         key: unity-android
 
     - name: Cache Unity Linux installer
-      if: steps.check-target-platforms.outputs.linux == 'true'
       id: cache-unity-linux
       uses: actions/cache@v2
       with:
@@ -107,7 +103,6 @@ runs:
         key: unity-linux
 
     - name: Cache Unity WebGL installer
-      if: steps.check-target-platforms.outputs.webgl == 'true'
       id: cache-unity-webgl
       uses: actions/cache@v2
       with:
@@ -115,7 +110,6 @@ runs:
         key: unity-webgl
 
     - name: Cache Unity AppleTV installer
-      if: steps.check-target-platforms.outputs.appletv == 'true'
       id: cache-unity-appletv
       uses: actions/cache@v2
       with:
