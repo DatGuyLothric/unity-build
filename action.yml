@@ -136,7 +136,9 @@ runs:
 
     - name: Build app
       run: sudo /Applications/Unity/Unity.app/Contents/MacOS/Unity -nographics -quit -batchmode -logfile -projectPath ${{ inputs.project_path }} -executeMethod ${{ inputs.build_script }} -username '${{ inputs.username }}' -password '${{ inputs.password }}' -serial ${{ inputs.serial }} -silent-crashes
+      shell: bash
 
     - name: Revoke license
       if: always()
       run: sudo /Applications/Unity/Unity.app/Contents/MacOS/Unity -nographics -quit -batchmode -logfile -returnlicense -username '${{ inputs.username }}' -password '${{ inputs.password }}'
+      shell: bash
